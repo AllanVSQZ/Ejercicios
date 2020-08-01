@@ -1,0 +1,220 @@
+- Class: meta
+  Course: Ejercicios
+  Lesson: Clases de Objetos
+  Author: Allan Vásquez
+  Type: Standard
+  Organization: Universidad Francisco Marroquín
+  Version: 1.0.1
+  
+  
+
+- Class: text
+  Output: El objeto no atómico más simple en R es el vector.
+
+- Class: text
+  Output: Un vector puede contener varios objetos DE LA MISMA CLASE, eso significa que no se puede concetenar objetos de clases distintas 
+    en el mismo vector.
+
+- Class: text
+  Output: En el ejercicio anterior trabajamos únicamente con vectores numericos, pero existen otras clases de vectores, además de la clase "numeric" 
+    R maneja las clases "character", "factor", "complex", "integer" y "logical".
+
+- Class: text
+  Output: Para obtener la clase de un objeto se usa la función class(), entre paréntesis se coloca la variable de la que queremos saber la clase.
+
+- Class: cmd_question
+  Output: Usemos el vector pH que creamos en el ejercicio para ejemplificar esto, escribe el comando para obtener la clase del vector pH.
+  CorrectAnswer: class(pH)
+  AnswerTests: omnitest(correctExpr='class(pH)')
+  Hint: Recuerda que debes colocar el nombre de la variable, en este caso pH, entre los paréntesis de la función class().
+
+
+- Class: text
+  Output: En R, las clases "numeric", "integer" y "complex" sirven para manejar numeros de distintas formas,
+    la clase "numeric" puede contener números enteros y décimales, la clase "integer" solamente permite
+    números enteros y la clase "complex" admite números complejos con la unidad imaginaria i.
+
+- Class: text
+  Output: En este ejercicio vamos a ver más detenidamente las clases 'character', 'factor' y 'logical'. Vamos a empezar con la clase 'logical'.
+
+- Class: text
+  Output: Los vectores lógicos contienen valores TRUE, FALSE, o NA (que significa 'no disponible').
+    Estos valores se generan como producto de una operación lógica, son muy útiles para transformación de datos y para filtros. 
+    Veamos algunos ejemplos...
+
+- Class: cmd_question
+  Output: Primero, vamor a crear un vector numérico 'n' que contenga los valores 0.5, 55,
+    -10, y 6.
+  CorrectAnswer: n <- c(0.5, 55, -10, 6)
+  AnswerTests: any_of_exprs('n <- c(0.5, 55, -10, 6)', 'n = c(0.5, 55, -10, 6)')
+  Hint: Recuerda que la funcioón c() sirve para crear vectores. Y no olvides que debes guardar tu 
+    vector en una variable llamada 'n'.
+
+- Class: cmd_question
+  Output: Ahora vamos a crear una variable llamada 'tf' que almacene el resultado de n < 1, es decir "n menor que uno".
+  CorrectAnswer: tf <- n < 1
+  AnswerTests: any_of_exprs('tf <- n < 1', 'tf = n < 1' )
+  Hint: Utiliza tf <- n < 1 para asignar el resultado de  'n< 1' a una variable llamada 'tf'.
+
+- Class: mult_question
+  Output: ¿Como piensas que se veraá el nuevo vector 'tf'?
+  CorrectAnswer: Un vector con 4 valores lógicos.
+  AnswerChoices: Un vector con 4 valores lógicos.; Un único valor lógico.
+  AnswerTests: omnitest(correctVal='Un vector con 4 valores lógicos.')
+  Hint: ¿Recuerdas el ejercicio de aritmética? R realizar operaciones elemento-por-elemento cuando se aplican a vectores.
+
+- Class: cmd_question
+  Output: Imprime el vector tf.
+  CorrectAnswer: tf
+  AnswerTests: omnitest(correctExpr='tf')
+  Hint: Solo escribe tf y presiona enter.
+
+- Class: text
+  Output: La expresión 'n < 1' es una comparación, en este caso el comparador '<', menor que,
+    se aplica a cada elemento del vector y devuelve TRUE cada vez que se cumple con el criterio de dicho elemento sea menor que 1.
+
+- Class: text
+  Output: El primer elemento del vector n es 0.5, que es menor que 1, por lo que cumple con el criterio
+    y el resultado es TRUE, el segundo elemento de n es 55, que es mayor que 1, por lo que el resultado es FALSE,
+    la misma lógica se aplica para el tercer y cuarto elemento del vector.
+
+- Class: cmd_question
+  Output: Intentemos algo más, escribe n >= 6.
+  CorrectAnswer: n >= 6
+  AnswerTests: omnitest(correctExpr='n >= 6')
+  Hint: No necesitamos crear una nueva variable, solamente escribe n >= 6,
+    no debes espacios entre el > y el =, este operador de comparación se lee como "mayor o igual".
+
+- Class: text
+  Output: Esta vez estamos analizando cada elemento de n para ver si es mayor o igual a 6.
+    Dado que únicamente el 55 y el 6 son mayores o iguales a 6, el segundo y el cuarto elemento del
+    resultado son TRUE, el primero y el tercero son FALSE.
+
+- Class: text
+  Output: Los simbolos '<' y '>=' en estos ejemplos se llaman "operadores lógicos".
+    Otros operarores lógicos que podemos usar son '>', '<=', '==' para igualdad, y '!='' para "no igual a".
+
+- Class: text
+  Output: Si queremos que un elemento cumpla con dos condiciones podemos usar el operador '&' o "conjunción",
+    que hace que las dos condiciones deban cumplirse para devolver TRUE. También existe el operador '|' o "disyunción", 
+    que devuelve TRUE si al menos una de las dos condiciones se cumple. Por último, el operador '!' o "negación"
+    cambia todos los TRUE por FALSE y viceversa.
+
+- Class: text
+  Output: Esto está interesante, vamos a jugar un poco con los operadores lógicos para sentirnos más familiarizados con estos.
+
+- Class: text
+  Output: Haz tu mejor esfuerzo para predecir el resultado de cada una de las siguientes expresiones.
+    Puedes usar papel y lápiz si lo necesitas. Si está muy difícil intenta adivinar, recuerda que tienes 50% de 
+    probabilidades de acertar.
+
+- Class: mult_question
+  Output: (3 > 5) & (4 == 4)
+  CorrectAnswer: 'FALSE'
+  AnswerChoices: TRUE; FALSE
+  AnswerTests: omnitest(correctVal='FALSE')
+  Hint: Puedes cortar el problema en dos partes. El '&' establece que AMBOS
+    condicionales deben ser TRUE. Si ambas condiciones "3 mayor que 5" y "4 igual a 4 "son ciertas el resultado será TRUE.
+
+- Class: mult_question
+  Output: (TRUE == TRUE) | (TRUE == FALSE)
+  CorrectAnswer: 'TRUE'
+  AnswerChoices: TRUE; FALSE
+  AnswerTests: omnitest(correctVal='TRUE')
+  Hint: De neuvo puedes separar el problema en dos partes, el operador  '|' establece que AL MENOS UNA de las 
+    condiciones debe ser TRUE.
+
+- Class: mult_question
+  Output: ((111 >= 111) | !(TRUE)) & ((4 + 1) == 5)
+  CorrectAnswer: 'TRUE'
+  AnswerChoices: TRUE; FALSE
+  AnswerTests: omnitest(correctVal='TRUE')
+  Hint: Esta es un poco más difícil. Recuerda que el simbolo '!' es la negación. 
+    Además hay un orden de operaciones aquí. Las condiciones que estaán entre pareéntesis deben evaluarse primero.
+
+- Class: text
+  Output: No te preocupes si te costó un poco resolver estos problemas. Son intencionalmente difíciles.
+    Trabajar con operadores lógicos siempre toma tiempo, pero puede ayudarnos a resolver problemas con los 
+    que nos podemos encontrar cuando estamos trabajando con datos de nuestras investigaciones.
+
+- Class: text
+  Output: Ahora vemos a hablar de los vectores tipo 'character' y 'factor'. Para crear este tipo de vectores es necesario 
+    que usemos las comillas "" en cada elemento del vector para indicar a R que se trata de una cadena de caractéres.
+
+- Class: text
+  Output: Este tipo de vectores sirve para almacenar variables categóricas, o bien respuestas a preguntas abiertas en una encuesta. Veamos un ejemplo.
+
+- Class: cmd_question
+  Output: Supongamos que tenemos un pequeño grupo de cinco pacientes en un estudio, y queremos analizar la características demograficas de esta muestra.
+    Vamos a ejecutar el siguiente comando 'sexo <- c("M", "F", "F", "F", "M")'
+  CorrectAnswer: sexo <- c("M", "F", "F", "F", "M")
+  AnswerTests: omnitest(correctExpr='sexo <- c("M", "F", "F", "F", "M")')
+  Hint: Unicamente esctibe sexo <- c("M", "F", "F", "F", "M") y presiona enter.
+
+- Class: cmd_question
+  Output: Por lo general usamos tablas de frecuencias para describir variables categóricas en un estudio 
+    vamos a crear una tabla de frecuencias con la función 'table(sexo)'.
+  CorrectAnswer: table(sexo)
+  AnswerTests: omnitest(correctExpr='table(sexo)')
+  Hint: Unicamente esctibe table(sexo) y presiona enter. 
+
+- Class: text
+  Output: Puedes ver que la función table puede usarse con un vector de tipo 'character' para constuir facilmente una tabla de frecuencias.
+    Sin embargo, la mejor clase para almacenar variables que permiten agrupar datos es 'factor'.
+
+- Class: text
+  Output: Las funciones estadísticas de R permiten usar las variables 'factor' para separar grupos, por lo que realmente es mejor que 
+    trabajemos nuestras variables categóricas como vectores 'factor' en vez de 'character', para convertir objetos de una clase a otra se utilza la 
+    coerción, las funciones de coerción son 'as.factor()', 'as.numeric()', 'as.logical' entre otras similares. Vamos a hacer algunos ejemplos de coerción.
+
+- Class: cmd_question
+  Output: Primero, convirtamos la variable sexo que es de tipo 'character' al tipo 'factor', vamos a guardar este nuevo vector como sexo_factor.
+  CorrectAnswer: sexo_factor <- as.factor(sexo)
+  AnswerTests: any_of_exprs('sexo_factor <- as.factor(sexo)', 'sexo_factor = as.factor(sexo)')
+  Hint: Recuerda que para convertir entre clases de objetos usamos las funciones de coerción, en este caso as.factor(),
+     usando como argumento el vector 'sexo' y guardando el resultado como una nueva variable sexo_factor, la sintaxis correcta es 
+     sexo_factor <- as.factor(sexo).
+
+- Class: cmd_question
+  Output: Ahora obtengamos la clase del objeto 'sexo_factor'.
+  CorrectAnswer: class(sexo_factor)
+  AnswerTests: omnitest(correctExpr='class(sexo_factor)')
+  Hint: Como vimos al principio de este ejercicio, la función class() permite obtener la clase de un objeto, solo debemos pasar 'sexo_factor' 
+    como argumento de esta función.
+
+- Class: text
+  Output: Manejar correctamente las clases de objetos es muy importante en R, ya que hay funciones que se ejecutan sobre objetos de una clase
+    específica y pierden sentido o simplemente producen errores cuando intentas aplicarla a objetos de la clase equivocada.
+
+- Class: mult_question
+  Output: ¿Qué crees que ocurrirá si intentas obtener el logaritmo negativo base 10 del objeto 'sexo'?
+  CorrectAnswer: 'Error, No se puede ejecutar una operación matemática en un vector que no sea numérico.'
+  AnswerChoices: Error, No se puede ejecutar una operación matemática en un vector que no sea numérico.; R devolverá la respuesta como vector numérico.; Error, El objeto C_char no existe.
+  AnswerTests: omnitest(correctVal='Error, No se puede ejecutar una operación matemática en un vector que no sea numérico.')
+  Hint: Las funciones matemáticas como -log10() no se pueden ejecutar en objetos que no sean numericos.
+
+- Class: cmd_question
+  Output: Ahora intentemos obtener una tabla de frecuencias de un vector numérico 'pH'.
+  CorrectAnswer: table(pH)
+  AnswerTests: omnitest(correctExpr='table(pH)')
+  Hint: Escribe table(pH) y presiona enter.
+
+- Class: text
+  Output: Esta vez puede que R si nos haya dado una respuesta al comando table(pH), pero ¿tiene sentido?, realmente no nos sirve de mucho 
+    crear una tabla de frecuencias de un vector numericos.
+
+- Class: text
+  Output: Nuevamente resalto la importancia de manejar correctamente las clases de objetos que existen en R, es por esto que desde el principio 
+    de nuestra investigación debemos definir con que tipo de variables vamos a trabajar, cuantitativas, cualitativas, dicotómicas, discretas, 
+    continuas... Ya que todo esto es importante para que sea posible analizar nuestros datos.
+
+- Class: text
+  Output: Muy bien, hemos aprendido a reconocer las clases de objetos, a trabajar con operadores lógicos, a interconvertir clases y sabemos 
+    porque son importantes, este ha sido un ejercicio largo. Es hora de un descanso.
+
+- Class: mult_question
+  Output: ¿Deseas obtener puntos por este ejercicio?
+  CorrectAnswer: NULL
+  AnswerChoices: Si;No
+  AnswerTests: demand()
+  Hint: ""
