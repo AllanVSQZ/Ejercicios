@@ -1,0 +1,159 @@
+- Class: meta
+  Course: Ejercicios
+  Lesson: Operaciones, Variables y Vectores numéricos
+  Author: Allan Vásquez
+  Type: Standard
+  Organization: Universidad Francisco Marroquin
+  Version: 1.0
+
+- Class: text
+  Output: En este ejercicio vamos a cubrir algunas nociones basicas del lenguaje R.
+
+- Class: cmd_question
+  Output: En su forma más simple, R puede ser usado como una calculadora. Escribe 5 + 7 y presiona Enter.
+  CorrectAnswer: 5 + 7
+  AnswerTests: omnitest(correctExpr='5 + 7')
+  Hint: Type 5 + 7 and press Enter.
+
+- Class: text
+  Output: R simpplemente va a 'imprimir' en la pantalla el resultado, es decir, el número 12. Sin embargo R es más que una calculadora, es un lenguaje de programación, y su objetivo es automatizar operaciones.
+
+- Class: text
+  Output: En este caso, supongamos que vamos a necesitar usar esta suma posteriormente en otra operación. En vez de escribir 5 + 7 cada vez que necesitemos este valor vamos a guardar el resultado de esta operación como una variable.
+
+- Class: text
+  Output: La forma de definir una variable en R es usando el operador de asignación, que puede ser de dos formas, '<-' o '='.
+
+- Class: text
+  Output: El primer operador de asignación luce como una flecha, literalmente es el signo 'menor que' y un guión, el otro operador el es signo 'igual'.
+
+- Class: cmd_question
+  Output: Vamos a asignar el resultado de 5 + 7 a una nueva variable llamada 'x', fijate que debe ser minúscula, es importante prestar atención ya que R distingue mayúsculas de minúsculas.
+  CorrectAnswer: x <- 5 + 7
+  AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5', 'x = 5 + 7', 'x = 7 + 5')
+  Hint: Escribe x <- 5 + 7. R no interpreta los espacios entre las partes de un comando, pero no puedes usar un espacio entre '<'' y '-'.
+
+- Class: text
+  Output: Puedes notar que R no imprime el resultado cuando asignas una variable, de hecho asume que no necesitas el resultado en ese momento y que lo estas guardando para usarlo mas tarde.
+
+- Class: cmd_question
+  Output: Para ver el contenido de la variable 'x' simplemente escribe x y presiona Enter.
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: Presiona la tecla x y luego Enter. Ten en cuanta que debe ser minúscula.
+
+- Class: cmd_question
+  Output: Ahora vamos a guardar el resultado de la operación x - 3 en una variable llamada y.
+  CorrectAnswer: y <- x - 3
+  AnswerTests: any_of_exprs('y <- x - 3', 'y = x - 3')
+  Hint: Escribe y <- x - 3 y presiona Enter. Si te gusta escribir x - 3 o x-3 no importa, pero es un buen habito dejar espacios antes y despues del operador "<-" o "=".
+
+- Class: cmd_question
+  Output: ¿Cuál será el valor de y? Imprime y para saberlo.
+  CorrectAnswer: 'y'
+  AnswerTests: omnitest(correctExpr='y')
+  Hint: Presiona la tecla y y luego Enter, recuerda que debe ser minúscula.
+
+- Class: text
+  Output: Ahora, vamos a crear un vector, en R un vector es un conjunto ordenado de datos. Cualquier variable que contenga datos se llama "objeto", el objeto no atoómico más simple es el vector.
+
+- Class: cmd_question
+  Output: La forma más común de crear un vector es usar la función  c(), esta se llama "concatenar". Vamos a crear un vector que contenga los números 1.1, 9 y 3.14 , lo vamos a guardar en la variable 'z'.
+  CorrectAnswer: z <- c(1.1, 9, 3.14)
+  AnswerTests: any_of_exprs('z <- c(1.1, 9, 3.14)', 'z = c(1.1, 9, 3.14)')
+  Hint: Recuerda que el vector debe guardarse en la variable z, el comando z <- c(1.1, 9, 3.14) va a hacer justo eso, asignar a la variable z un vector con los números 1.1, 9 y 3.14. Dejar espacios entre las comas y los números no es necesario, pero es una buena práctica para que el código sea mas facil de leer y esteé menos apretujado.
+
+- Class: cmd_question
+  Output: Imprime la variable z a la pantalla, nota que en la salida no hay comas entre cada elemento del vector.
+  CorrectAnswer: z
+  AnswerTests: omnitest(correctExpr='z')
+  Hint: Presiona la tecla z y luego Enter.
+
+- Class: cmd_question
+  Output: 'Los vectores numericos pueden usarse en calculos aritméticos. escribe el siguiente comando para ver que sucede: z * 2'
+  CorrectAnswer: z * 2
+  AnswerTests: omnitest(correctExpr='z * 2')
+  Hint: Ingresa z * 2, sin asignar una nueva variable. El signo * es para multiplicar.
+
+- Class: text
+  Output: R multiplica cada elemento del vector z por 2 y nos muestra el resultado como lo vimos arriba. 
+
+- Class: text
+  Output: Otros operadores aritmeticos comunes son `+`, `-`, `/`, y `**` para potencias, (por ejemplo x**2
+    significa 'x al cuadrado'). Para sacar la raíz cuadrada usamos sqrt(), para obtener el logaritmo natural usamos log() y para el logaritmo base 10 se usa log10().
+
+- Class: cmd_question
+  Output: Antes de comenzar con las operaciones aritméticas sobre vectores vamos a crear un vector para trabajar, crearemos el vector 'C' que contendrá los valores 3.99*10**-8, 5.02*10**-8 y 6.02*10**-08.
+  CorrectAnswer: C <- c(3.99*10**-8, 5.02*10**-8, 6.02*10**-08)
+  AnswerTests: any_of_exprs('C <- c(3.99*10**-8, 5.02*10**-8, 6.02*10**-8)', 'C = c(3.99*10**-8, 5.02*10**-8, 6.02*10**-8)')
+  Hint: Recuerda que debes crear un vector con la función c(), y guardarlo en una variable llamada 'C'.
+
+- Class: cmd_question
+  Output: Calcula el logaritmo (base 10) negativo del vector C, guarda este calculo en una variable llamada pH.
+  CorrectAnswer: pH <- -log10(C)
+  AnswerTests: any_of_exprs('pH <- -log10(C)', 'pH = -log10(C)')
+  Hint: Recuerda usar -log10() para el logaritmo base 10 negativo, el signo negativo también es importante y asignar este calculo a la variable 'pH'. 
+
+- Class: mult_question
+  Output: Antes de ver el resultado de la variable pH. ¿Qué crees que contendrá?
+  CorrectAnswer: un vector con 3 elementos
+  AnswerChoices: un vector con 3 elementos; un solo número; un vector vacío
+  AnswerTests: omnitest(correctVal='un vector con 3 elementos')
+  Hint: 'Recuerda como trabaja R cuando hace operaciones aritméticas con vectores, realiza la operación a cada elemento.'
+
+- Class: cmd_question
+  Output: Imprime el contenido de la variable pH.
+  CorrectAnswer: pH
+  AnswerTests: omnitest(correctExpr='pH')
+  Hint: Solo debes escribir pH y presionar Enter.
+
+- Class: text
+  Output: Tal y como lo pensaste en la pregunta anterior, R obtiene el logaritmo negativo de cada uno de los elementos del vector C y crea un nuevo vector con los resultados.
+
+- Class: cmd_question
+  Output: Ahora vamos a crear una nueva variable llamada pOH que contendra el resultado de restar 14 - pH.
+  CorrectAnswer: pOH <- 14 - pH
+  AnswerTests: any_of_exprs('pOH <- 14 - pH', 'pOH = 14 - pH')
+  Hint: Ingresa pOH <- 14 - pH, recuerda que es una buena práctica dejar espacio entre cada elemento del comando para mejorar la legibilidad.
+
+- Class: cmd_question
+  Output: Imprime el contenido de pOH.
+  CorrectAnswer: pOH
+  AnswerTests: omnitest(correctExpr='pOH')
+  Hint: Escribe pOH y presiona Enter para imprimir el contenido de la varible.
+
+- Class: cmd_question
+  Output: Recordemos el vector z, tenía tres elementos, los números 1.1, 9 y 3.14, ahora vamos a multiplicar el vector pH con el vector z.
+  CorrectAnswer: pH * z
+  AnswerTests: any_of_exprs('pH * z', 'x * pH')
+  Hint: Usa el * para multiplicar, recuerda dejar espacio entre los operadores del comando.
+
+- Class: text
+  Output: Cuando tenemos dos vectores con la misma cantidad de elementos, las operaciones con vectores se realizan de forma secuencial, en este caso R multiplica el primer elemento de pH por el primer elemento de z, luego el segundo elemento de pH por el segundo elemento de z y así sucesivamente.
+    Si uno de los vectores contiene menos elementos, el vector más pequeño se "recicla" el número de veces que sea necesario para operarse con el vector más grande. A esto se le llama RECICLAJE de vectores.
+
+- Class: text
+  Output: Cuando anteriormente hicimos la operación 14 - pH, lo que ocurre realmente es que R toma el número 14 y lo recicla para cada elemento del vector pH.
+
+- Class: text
+  Output: Lo que realmente se computa es c(14, 14, 14) - c(7.399027, 7.299296, 7.220404).
+
+- Class: cmd_question
+  Output: Vamos a ver un ejemplo de como funciona el reciclade de vectores, intenta sumar
+    c(1, 2, 3) más c(0, 10). No lo vamos a guardar como variable, solo queremos ver el resultado.
+  CorrectAnswer: c(1, 2, 3) + c(0, 10)
+  AnswerTests: omnitest(correctExpr='c(1, 2, 3) + c(0, 10)')
+  Hint: Escribe c(1, 2, 3) + c(0, 10) y presiona Enter.
+
+- Class: text
+  Output: Si observas, R realiza la operación que solicitaste haciendo reciclaje de vectores, pero también muestra un Warning para informarte que algo raro puede estar ocurriendo.
+
+- Class: text
+  Output: Con esto terminarmos este ejercicio, aprendimos a definir variables, a crear vectores numéricos y hacer operaciones aritméticas con estas. Hemos aprendido mucho.
+
+- Class: mult_question
+  Output: "¿Deseas obtener puntuación por este ejercicio?"
+  CorrectAnswer: NULL
+  AnswerChoices: Si; No
+  AnswerTests: demand()
+  Hint: ""
