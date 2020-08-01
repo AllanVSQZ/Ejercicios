@@ -1,0 +1,117 @@
+- Class: meta
+  Course: Ejercicios
+  Lesson: Data frames
+  Author: Allan Vásquez
+  Type: Standard
+  Organization: Universidad Francisco Marroquín
+  Version: 1.0
+  
+  
+- Class: text
+  Output: En esta lección vamos a trabajar con data frames, esta estructura de datos es bidimensional, dado que contiene columnas y filas, a diferencia de los vectores que son unidimensionales.
+
+- Class: text
+  Output: Podría decirse que un data frame es una tabla formada por vectores en donde cada uno de ellos es una columna de dicha tabla. Cada uno de estos vectores puede ser de distinta clase.
+
+- Class: text
+  Output: Existen dos formas de crear data frames, una es uniendo vectores pre-existentes y la otra es importando datos desde tablas en formato CSV.
+
+- Class: text
+  Output: Vamos a iniciar con la primera forma, unir vectores pre-existentes en R para obtener un data frame, esta tecnica puede servirnos cuando queremos tomar columnas que nos interesan de varias tablas y crear una nueva.
+  
+- Class: cmd_question
+  Output: Comencemos creando un vector de caracteres que contenga los nombres de algunos pacientes imaginarios, Diego, María, Kelly, y Alex. Vamos a guardar estos nombres en una variable llamada "pacientes".
+  CorrectAnswer: pacientes <- c("Diego", "María", "Kelly", "Alex")
+  AnswerTests: omnitest(correctExpr='pacientes <- c("Diego", "María", "Kelly", "Alex")')
+  Hint: Asegurate de respetar las mayúsculas, tildes y usar las comillas. También es importante que no mezcles el orden de los nombres.
+  
+- Class: cmd_question
+  Output: Ahora vamos a crear otro vector numérico que que contenga los numeros 5, 7, 8 y 11, vamos a guardar este vector con el nombre edad.
+  CorrectAnswer: edad <- c(5, 7, 8, 11)
+  AnswerTests: omnitest(correctExpr='edad <- c(5, 7, 8, 11)')
+  Hint: Recuerda guardar el vector con el nombre edad, y de respetar el orden de los numeros.
+
+- Class: cmd_question
+  Output: Ahora vamos a usar la función data.frame() para unir los dos vectores en una tabla y vamos a guardarla con el nombre pediatría. La sintaxis va a ser pediatría <- data.frame(pacientes, edad).
+  CorrectAnswer: pediatría <- data.frame(pacientes, edad)
+  AnswerTests: omnitest(correctExpr='pediatría <- data.frame(pacientes, edad)')
+  Hint: Escribe pediatría <- data.frame(pacientes, edad) para combinar ambos vectores en una tabla.
+
+- Class: mult_question
+  Output: ¿Cómo crees que se verá la variable pediatría?
+  CorrectAnswer: Una tabla con dos columnas y cuatro filas.
+  AnswerChoices: Una tabla con dos columnas y cuatro filas.;Una tabla con cuatro columnas y dos filas.;Dos vectores concatenados uno tras otro.
+  AnswerTests: omnitest(correctVal='Una tabla con dos columnas y cuatro filas.')
+  Hint: Intenta de nuevo.
+
+- Class: cmd_question
+  Output: Vamos a confirmar, imprime la variable pediatría a la pantalla.
+  CorrectAnswer: pediatría
+  AnswerTests: omnitest(correctExpr='pediatría')
+  Hint: Simplemente escribe pediatría y presiona Enter.
+
+- Class: text
+  Output: Ahora vamos a aprender la segunda manera de crear tablas de datos, que consiste en importarlas de otros programas, usando la función read.csv().
+
+- Class: text
+  Output: El formato CSV es un formato estándar, la ventaja de que R utilice este formato es que podemos crear nuestras tablas en Google Speadsheets, Microsoft Excel o Apple Numbers guardarlas con el formato CSV.
+
+- Class: text
+  Output: En la página de Classroom de este ejercicio encontrarás una archivo en formato llamado BC.csv. Esta es una base de  datos de un estudio
+    de cancer de mama, tiene varias columnas entre ellas el sexo del paciente, la edad, tipo de tumor, tratamienro quirurgíco y tratamiento quiímico. 
+    Es necesario que lo descargues y por el momento lo vamos a dejar en la carpeta de descargas de la computadora.
+
+
+- Class: text
+  Output: Antes de poderlo importar a R necesitamos copiar el archivo al "directorio de trabajo". El directorio de trabajo es una carpeta dentro de la 
+      computadora en donde R busca y guarda todos los datos del entorno en el que estamos trabajando, si estamos usando RStudio podemos usar el menú 
+      'sessions' para definir el directorio de trabajo. La función getwd() nos permite conocer su ubicacion en la computadora.
+
+- Class: cmd_question
+  Output: Para saber cual es la dirección de tu directorio de trabajo escribe el comando getwd().
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Solo escribe getwd() y presiona Enter.
+
+- Class: text
+  Output: Ahora que ya sabes cuál es el directorio de trabajo, usa el explorador de archivos de archivos de tu computadora para copiar el archivo
+     BC.csv a esa carpeta.
+
+- Class: text
+  Output: Una vez copiado el archivo el siguiente paso es importarlo, para esto vamos a usar la función read.csv(), en su forma mas simple esta función
+    identifica automaticamente la clase de cada columna y obtiene los titulos de la primera fila. Vamos a importar la tabla a una variable llamada BC.
+
+- Class: cmd_question
+  Output: Escribe BC <- read.csv("BC.csv"), lo que estamos haciendo es guardando la tabla del archivo csv en una variable para poderla manejar en R.
+  CorrectAnswer: BC <- read.csv("BC.csv")
+  AnswerTests: omnitest(correctExpr='BC <- read.csv("BC.csv")')
+  Hint: Escribe BC <- read.csv("BC.csv"), recuerda respetar los espacios, mayúsculas, minúsculas y las COMILLAS.
+
+- Class: cmd_question
+  Output: Ahora investiguemos que clase de objeto es BC, utiliza la función class().
+  CorrectAnswer: class(BC)
+  AnswerTests: omnitest(correctExpr='class(BC)')
+  Hint: Escribe class(BC) y presiona Enter.
+
+- Class: cmd_question
+  Output: Para saber los nombres de las columnas de la tabla podemos usar la función names().
+  CorrectAnswer: names(BC)
+  AnswerTests: omnitest(correctExpr='names(BC)')
+  Hint: Escribe names(BC) y presiona Enter.
+
+- Class: cmd_question
+  Output: Por último, la función str() nos dará de forma resumida los nombres, la clase y niveles de cada columna del data frame. Prueba la función str().
+  CorrectAnswer: str(BC)
+  AnswerTests: omnitest(correctExpr='str(BC)')
+  Hint: Escribe str(BC) y presiona Enter.
+
+- Class: text
+  Output: En esta lección hemos aprendido a trabajar con una de las estructuras de datos mas comunes e importantes en ciencia de datos, 
+    de ahora en adelante vamos a trabajar mucho con data frames.
+
+- Class: mult_question
+  Output: "¿Deseas que este ejercicio cuente como tarea?"
+  CorrectAnswer: NULL
+  AnswerChoices: Si;No
+  AnswerTests: demand()
+  Hint: ""
