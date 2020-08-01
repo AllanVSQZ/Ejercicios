@@ -1,0 +1,73 @@
+- Class: meta
+  Course: Ejercicios
+  Lesson: Subconjuntos de Datos
+  Author: Allan Vásquez
+  Type: Standard
+  Organization: Universidad Francisco Marroquín
+  Version: 1.0
+
+- Class: text
+  Output: En este ejercicio vamos conocer la forma de extraer objetos más pequeños a partir de objetos mas grandes en R.
+
+- Class: text
+  Output: Esto puede servirnos por ejemplo para obtener un dato específico de un vector o una columna específica de una tabla.
+
+- Class: text
+  Output: Para esto se pueden utilizar el nombre del subconjunto o su índice.
+
+- Class: text
+  Output: Anteriormente habíamos visto que la función names() nos muestra el nombre de las columnas de una tabla y también de los elementos de un vector.
+
+- Class: cmd_question
+  Output: Obtengamos nuevamente los nombres de las columnas de la tabla "BC".
+  CorrectAnswer: names(BC)
+  AnswerTests: omnitest(correctExpr='names(BC)')
+  Hint: Introduce names(BC) en la línea de comandos y prsiona Enter.
+
+- Class: cmd_question
+  Output: El siguiente paso es acceder a una sola de las columnas, para esto usaremos el simbolo '$' y lo vamos a colocar inmediatamente
+    después del nombre del data frame (BC), e inmediatamente después del simbolo "$" vamos a poner el nombre de la columna, 
+    en este caso vamos a solicitar la columna "tipo".
+  CorrectAnswer: BC$tipo
+  AnswerTests: omnitest(correctExpr='BC$tipo')
+  Hint: Tal vez fue confusa la instruccioón, escribe BC$tipo y prsiona Enter.
+
+- Class: text
+  Output: Listo! R nos muestra la columna "tipo" de la tabla "BC" como  si fuera un vector aparte, y como ya estudiamos anteriormente 
+    podemos usar un vector para hacer cosas interesantes como estadistica descriptiva o tablas de frecuencias.
+
+- Class: text
+  Output: Es importante tomar en cuenta que si escribimos unicamente "tipo" en vez de "BC$tipo" R nos devolverá un error puesto
+    que no existe ningun objeto llamado solamente "tipo", recordemos que es una COLUMNA dentro de una TABLA, por eso necesitamos
+    el operador "$" para hacer subsetting.
+
+- Class: text
+  Output: Anteriormente mencioné que tammbién que es posible hacer subsetting por medio de los índices de los elementos de
+    un objeto.
+
+- Class: text
+  Output: Los índices es una numeración que R asigna a cada elemento, para hacer subsetting usando los índices se usan los corchetes [ ]
+    y se coloca el índice, es decir el número dentro de los corchetes.
+
+- Class: cmd_question
+  Output: Escribe el código para obtener la cuarta columa de la tabla 'BC' usando los corchetes para extraer por índice.
+  CorrectAnswer: BC[4]
+  AnswerTests: omnitest(correctExpr='BC[4]')
+  Hint: Escribe BC[4] para obtener la cuarta columna de la tabla 'BC'.
+
+- Class: text
+  Output: Si eres observador posiblemente te diste cuenta de que los corchetes devuelven la columna en un formato tabla
+    mientras que el signo '$' lo hace en en una sola línea como si fuera un vector. Esto es importante ya que, por ejemplo,
+    las funciones de estadistica descriptiva aceptan unicamente vectores, entonces tenemos que usar el '$' mientras que
+    para presentar los datos de forma más elegante convendría usar los corchetes serían una mejor opción. 
+
+- Class: text
+  Output: Este es el fin de esta pequeña pero muy importante lección sobre subsetting. De ahora en adelante vamos a trabajar 
+    mucho con data frames y el subsetting es una habilidad que debemos dominar.
+
+- Class: mult_question
+  Output: "¿Deseas que este ejercicio cuente como tarea?"
+  CorrectAnswer: NULL
+  AnswerChoices: Si;No
+  AnswerTests: demand()
+  Hint: ""

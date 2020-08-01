@@ -1,0 +1,81 @@
+caso,sexo,edad,tipo,estadio,cirugia,quimioterapia,meses_libres,meses_vida,intervalo
+1,Masculino,67,Ductal Infiltrante,Estadio IV,Radical Pattey,SI,38,53,1
+2,Femenino,59,Ductal Insitu,Estadio IV,Radical Pattey,SI,55,64,3
+3,Femenino,22,Ductal Insitu,Estadio I,CCM C/Vaciamiento,SI,58,77,10
+4,Masculino,28,Ductal Infiltrante,Estadio IV,Radical Pattey,NO,60,75,12
+5,Masculino,73,Ductal Insitu,Estadio III,Radical Madden,NO,14,33,10
+6,Masculino,53,Ductal Insitu,Estadio II,CCM S/Vaciamiento,NO,29,65,1
+7,Masculino,51,Lobulillar in Situ,Estadio I,CCM S/Vaciamiento,SI,35,44,2
+8,Femenino,35,CA Inflamatorio,Estadio III,Radical Pattey,NO,22,28,2
+9,Masculino,35,Ductal Insitu,Estadio I,CCM S/Vaciamiento,SI,7,13,10
+10,Masculino,18,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,NO,58,59,2
+11,Masculino,48,Ductal Insitu,Estadio I,CCM C/Vaciamiento,NO,29,41,10
+12,Masculino,69,Ductal Insitu,Estadio IV,Radical Pattey,NO,54,88,3
+13,Femenino,30,Lobulillar in Situ,Estadio IV,Radical Madden,SI,54,71,4
+14,Masculino,32,Ductal Infiltrante,Estadio IV,Radical Pattey,SI,53,74,10
+15,Masculino,37,CA Inflamatorio,Estadio I,CCM S/Vaciamiento,SI,48,69,4
+16,Femenino,67,Lobulillar in Situ,Estadio IV,Radical Pattey,NO,45,66,11
+17,Femenino,42,Ductal Infiltrante,Estadio IV,Radical Pattey,NO,53,86,7
+18,Masculino,54,Ductal Insitu,Estadio II,CCM C/Vaciamiento,NO,20,32,10
+19,Masculino,56,Ductal Insitu,Estadio IV,Radical Pattey,SI,6,23,6
+20,Masculino,72,Ductal Insitu,Estadio IV,Radical Pattey,NO,18,29,11
+21,Femenino,27,Ductal Insitu,Estadio II,CCM C/Vaciamiento,NO,58,62,6
+22,Femenino,74,CA Inflamatorio,Estadio I,CCM C/Vaciamiento,NO,27,57,9
+23,Femenino,59,Ductal Insitu,Estadio II,CCM C/Vaciamiento,NO,55,63,8
+24,Masculino,27,Ductal Infiltrante,Estadio IV,Radical Madden,NO,49,85,1
+25,Femenino,18,Lobulillar in Situ,Estadio I,CCM S/Vaciamiento,NO,31,67,10
+26,Masculino,74,Lobulillar in Situ,Estadio II,CCM C/Vaciamiento,NO,57,87,3
+27,Masculino,48,Ductal Infiltrante,Estadio IV,Radical Madden,NO,34,38,5
+28,Masculino,26,CA Inflamatorio,Estadio I,CCM C/Vaciamiento,SI,18,24,7
+29,Masculino,72,Lobulillar in Situ,Estadio III,Radical Madden,SI,44,63,5
+30,Masculino,25,Lobulillar in Situ,Estadio II,CCM S/Vaciamiento,NO,60,81,3
+31,Masculino,45,Ductal Infiltrante,Estadio IV,Radical Pattey,SI,53,67,2
+32,Femenino,26,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,NO,32,42,12
+33,Masculino,19,Lobulillar in Situ,Estadio IV,Radical Pattey,SI,58,75,2
+34,Femenino,65,Ductal Infiltrante,Estadio IV,Radical Madden,NO,5,27,3
+35,Femenino,62,Ductal Insitu,Estadio II,CCM C/Vaciamiento,NO,42,58,2
+36,Masculino,48,Ductal Infiltrante,Estadio III,Radical Pattey,NO,59,75,9
+37,Masculino,67,Lobulillar in Situ,Estadio IV,Radical Pattey,NO,16,18,5
+38,Femenino,68,Ductal Infiltrante,Estadio IV,Radical Pattey,SI,13,45,1
+39,Femenino,34,Ductal Infiltrante,Estadio III,Radical Madden,NO,51,78,10
+40,Femenino,24,CA Inflamatorio,Estadio I,CCM C/Vaciamiento,NO,47,75,2
+41,Masculino,58,Lobulillar in Situ,Estadio II,CCM S/Vaciamiento,SI,57,71,8
+42,Femenino,63,Lobulillar in Situ,Estadio IV,Radical Pattey,SI,17,47,10
+43,Femenino,34,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,NO,28,55,7
+44,Femenino,68,Ductal Insitu,Estadio I,CCM C/Vaciamiento,SI,53,68,6
+45,Masculino,25,Ductal Insitu,Estadio III,Radical Pattey,NO,48,68,2
+46,Femenino,72,Ductal Infiltrante,Estadio III,Radical Madden,NO,7,23,12
+47,Femenino,60,Lobulillar in Situ,Estadio III,Radical Madden,SI,23,42,4
+48,Masculino,63,Ductal Insitu,Estadio III,Radical Pattey,SI,44,55,5
+49,Femenino,42,Ductal Insitu,Estadio I,CCM S/Vaciamiento,NO,49,77,1
+50,Femenino,59,CA Inflamatorio,Estadio IV,Radical Pattey,NO,44,62,7
+51,Masculino,73,Ductal Insitu,Estadio IV,Radical Madden,NO,23,59,5
+52,Femenino,70,CA Inflamatorio,Estadio IV,Radical Madden,SI,44,55,7
+53,Masculino,25,Ductal Infiltrante,Estadio II,CCM S/Vaciamiento,NO,32,34,2
+54,Masculino,57,Ductal Infiltrante,Estadio I,CCM S/Vaciamiento,SI,27,54,10
+55,Femenino,20,Ductal Insitu,Estadio III,Radical Pattey,NO,52,78,6
+56,Femenino,27,CA Inflamatorio,Estadio III,Radical Pattey,NO,54,66,6
+57,Masculino,34,Lobulillar in Situ,Estadio IV,Radical Madden,SI,42,43,3
+58,Femenino,65,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,SI,57,80,10
+59,Masculino,62,CA Inflamatorio,Estadio III,Radical Madden,NO,51,72,4
+60,Masculino,31,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,SI,43,72,1
+61,Masculino,75,Ductal Insitu,Estadio I,CCM C/Vaciamiento,SI,30,58,11
+62,Masculino,41,CA Inflamatorio,Estadio II,CCM C/Vaciamiento,NO,12,27,12
+63,Femenino,41,CA Inflamatorio,Estadio IV,Radical Pattey,NO,43,75,6
+64,Masculino,50,CA Inflamatorio,Estadio II,CCM C/Vaciamiento,SI,31,66,10
+65,Femenino,48,CA Inflamatorio,Estadio IV,Radical Madden,SI,28,42,11
+66,Femenino,72,Ductal Insitu,Estadio III,Radical Madden,NO,52,65,11
+67,Masculino,35,Ductal Insitu,Estadio I,CCM S/Vaciamiento,SI,25,34,2
+68,Femenino,54,Ductal Infiltrante,Estadio I,CCM C/Vaciamiento,SI,53,76,8
+69,Femenino,71,CA Inflamatorio,Estadio IV,Radical Pattey,SI,34,36,6
+70,Masculino,32,CA Inflamatorio,Estadio I,CCM C/Vaciamiento,NO,57,84,2
+71,Masculino,73,CA Inflamatorio,Estadio II,CCM S/Vaciamiento,NO,42,78,12
+72,Femenino,41,Ductal Insitu,Estadio II,CCM C/Vaciamiento,NO,33,56,4
+73,Femenino,26,CA Inflamatorio,Estadio I,CCM S/Vaciamiento,NO,15,24,5
+74,Masculino,36,Ductal Insitu,Estadio I,CCM S/Vaciamiento,SI,49,74,4
+75,Femenino,38,Lobulillar in Situ,Estadio I,CCM C/Vaciamiento,SI,46,77,4
+76,Masculino,73,Ductal Infiltrante,Estadio II,CCM S/Vaciamiento,SI,33,35,8
+77,Femenino,41,CA Inflamatorio,Estadio II,CCM C/Vaciamiento,SI,48,77,6
+78,Femenino,74,CA Inflamatorio,Estadio III,Radical Pattey,SI,28,51,10
+79,Femenino,62,Ductal Insitu,Estadio II,CCM S/Vaciamiento,NO,20,28,5
+80,Femenino,35,Lobulillar in Situ,Estadio IV,Radical Madden,NO,43,78,9
