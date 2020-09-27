@@ -69,7 +69,7 @@
     "c" para la líneas discontinuas "h" para líneas verticales, "s" para escalonado, "S" para otro tipo de escalonamiento.
 
 - Class: cmd_question
-  Output: Como te habrás dado cuenta, el tipo de gráfica por defecto es "p" o puntos. Ahora ingresa plot(c(1, 2, 3), c(3, 6, 9), type = "l") 
+  Output: Como te habrás dado cuenta, el tipo de gráfica por defecto es "p" o puntos. Ahora ingresa plot(c(1, 2, 3), c(1, 3, 9), type = "l") 
     en la línea de comandos para usar líneas.
   CorrectAnswer: plot(c(1, 2, 3), c(1, 3, 9), type = "l")
   AnswerTests: omnitest(correctExpr='plot(c(1, 2, 3),c(1, 3, 9), type = "l")')
