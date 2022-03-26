@@ -2,4 +2,3 @@
       # lesson is started. Any variables created here will show up in
       # the user's working directory and thus be accessible to them
       # throughout the lesson.
-system("defaults write org.R-project.R force.LANG en_US.UTF-8")
