@@ -22,7 +22,7 @@
 - Class: cmd_question
   Output: Comencemos creando un vector de caracteres que contenga los nombres de algunos pacientes imaginarios, Diego, María, Kelly, y Alex. Vamos a guardar estos nombres en una variable llamada "pacientes".
   CorrectAnswer: pacientes <- c("Diego", "María", "Kelly", "Alex")
-  AnswerTests: omnitest(correctExpr='pacientes <- c("Diego", "María", "Kelly", "Alex")')
+  AnswerTests: any_of_exprs('pacientes <- c("Diego", "María", "Kelly", "Alex")', ''pacientes = c("Diego", "María", "Kelly", "Alex")'')
   Hint: Asegurate de respetar las mayúsculas, tildes y usar las comillas. También es importante que no mezcles el orden de los nombres.
   
 - Class: cmd_question
@@ -74,7 +74,7 @@
   Hint: Solo escribe getwd() y presiona Enter.
 
 - Class: text
-  Output: Ahora que ya sabes cuál es el directorio de trabajo, usa el explorador de archivos de archivos de tu computadora para copiar el archivo
+  Output: Ahora que ya sabes cuál es el directorio de trabajo, usa el explorador de archivos de tu computadora para copiar el archivo
      BC.csv a esa carpeta.
 
 - Class: text
