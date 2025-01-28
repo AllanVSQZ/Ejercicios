@@ -22,7 +22,7 @@
 - Class: cmd_question
   Output: Comencemos creando un vector de caracteres que contenga los nombres de algunos pacientes imaginarios, Diego, María, Kelly, y Alex. Vamos a guardar estos nombres en una variable llamada "pacientes".
   CorrectAnswer: pacientes <- c("Diego", "María", "Kelly", "Alex")
-  AnswerTests: any_of_exprs('pacientes <- c("Diego", "María", "Kelly", "Alex")', ''pacientes = c("Diego", "María", "Kelly", "Alex")'')
+  AnswerTests: any_of_exprs('pacientes <- c("Diego", "María", "Kelly", "Alex")', 'pacientes = c("Diego", "María", "Kelly", "Alex")')
   Hint: Asegurate de respetar las mayúsculas, tildes y usar las comillas. También es importante que no mezcles el orden de los nombres.
   
 - Class: cmd_question
